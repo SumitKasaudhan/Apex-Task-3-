@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Development Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">WebDev Advanced</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#carousel">Carousel</a></li>
+                <li><a href="#weather">Weather</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Advanced Web Development</h1>
+                <p>Demonstrating responsive design, interactive JavaScript, and API integration</p>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="quiz-section">
+            <div class="container">
+                <h2>Interactive JavaScript Quiz</h2>
+                <div class="quiz-container">
+                    <div id="quiz-start" class="quiz-card">
+                        <h3>Test Your Web Development Knowledge</h3>
+                        <p>This quiz contains questions about HTML, CSS, and JavaScript. See how well you know web development!</p>
+                        <button id="start-quiz-btn" class="btn">Start Quiz</button>
+                    </div>
+                    
+                    <div id="quiz-questions" class="quiz-card hidden">
+                        <div class="quiz-header">
+                            <div id="quiz-progress">Question <span id="current-question">1</span> of <span id="total-questions">5</span></div>
+                            <div id="quiz-timer">Time: <span id="timer">30</span>s</div>
+                        </div>
+                        
+                        <div id="question-container">
+                            <h3 id="question-text">Question text will appear here</h3>
+                            <div id="answer-buttons" class="btn-grid">
+                                <!-- Answer buttons will be inserted here -->
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-footer">
+                            <button id="next-btn" class="btn" disabled>Next</button>
+                        </div>
+                    </div>
+                    
+                    <div id="quiz-results" class="quiz-card hidden">
+                        <h3>Quiz Results</h3>
+                        <div id="score-container">
+                            <div class="score-circle">
+                                <span id="score">0</span>/<span id="max-score">0</span>
+                            </div>
+                            <p id="score-message">You completed the quiz!</p>
+                        </div>
+                        <div id="results-details">
+                            <!-- Results details will be inserted here -->
+                        </div>
+                        <button id="restart-btn" class="btn">Restart Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Carousel Section -->
+        <section id="carousel" class="carousel-section">
+            <div class="container">
+                <h2>Interactive Image Carousel</h2>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=Web+Development" alt="Web Development">
+                                <div class="slide-caption">Web Development</div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <img src="https://via.placeholder.com/800x400/e74c3c/ffffff?text=HTML5" alt="HTML5">
+                                <div class="slide-caption">HTML5</div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <img src="https://via.placeholder.com/800x400/2ecc71/ffffff?text=CSS3" alt="CSS3">
+                                <div class="slide-caption">CSS3</div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <img src="https://via.placeholder.com/800x400/f39c12/ffffff?text=JavaScript" alt="JavaScript">
+                                <div class="slide-caption">JavaScript</div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="carousel-content">
+                                <img src="https://via.placeholder.com/800x400/9b59b6/ffffff?text=Responsive+Design" alt="Responsive Design">
+                                <div class="slide-caption">Responsive Design</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-button prev" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-button next" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-dots">
+                        <!-- Dots will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather API Section -->
+        <section id="weather" class="weather-section">
+            <div class="container">
+                <h2>Weather API Integration</h2>
+                <div class="weather-container">
+                    <div class="weather-search">
+                        <input type="text" id="city-input" placeholder="Enter city name...">
+                        <button id="search-weather" class="btn">Get Weather</button>
+                    </div>
+                    
+                    <div class="weather-display">
+                        <div id="weather-loading" class="weather-message">Enter a city to get weather information</div>
+                        <div id="weather-error" class="weather-message hidden"></div>
+                        
+                        <div id="weather-data" class="hidden">
+                            <div class="weather-header">
+                                <h3 id="weather-city"></h3>
+                                <div id="weather-date"></div>
+                            </div>
+                            
+                            <div class="weather-main">
+                                <div class="weather-temp-container">
+                                    <div id="weather-temp"></div>
+                                    <div id="weather-feels-like"></div>
+                                </div>
+                                
+                                <div class="weather-info-container">
+                                    <div id="weather-icon"></div>
+                                    <div id="weather-description"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="weather-details">
+                                <div class="weather-detail">
+                                    <i class="fas fa-tint"></i>
+                                    <span class="detail-label">Humidity:</span>
+                                    <span id="weather-humidity"></span>
+                                </div>
+                                
+                                <div class="weather-detail">
+                                    <i class="fas fa-wind"></i>
+                                    <span class="detail-label">Wind:</span>
+                                    <span id="weather-wind"></span>
+                                </div>
+                                
+                                <div class="weather-detail">
+                                    <i class="fas fa-compress-arrows-alt"></i>
+                                    <span class="detail-label">Pressure:</span>
+                                    <span id="weather-pressure"></span>
+                                </div>
+                                
+                                <div class="weather-detail">
+                                    <i class="fas fa-eye"></i>
+                                    <span class="detail-label">Visibility:</span>
+                                    <span id="weather-visibility"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Advanced Web Development. All rights reserved.</p>
+            <p>Created for learning responsive design, JavaScript interactivity, and API integration.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
